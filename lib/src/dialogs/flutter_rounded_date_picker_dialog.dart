@@ -309,7 +309,8 @@ class _FlutterRoundedDatePickerDialogState
                   if (widget.height == null)
                     Flexible(child: picker)
                   else
-                    SizedBox(
+                    Container(
+                      padding: EdgeInsets.symmetric(horizontal: 30),
                       height: widget.height,
                       child: picker,
                     ),
