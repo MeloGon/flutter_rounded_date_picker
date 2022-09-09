@@ -35,7 +35,8 @@ class FlutterRoundedDatePickerDialog extends StatefulWidget {
       this.builderDay,
       this.listDateDisabled,
       this.onTapDay,
-      this.onMonthChange})
+      this.onMonthChange,
+      this.title = ''})
       : super(key: key);
 
   final DateTime initialDate;
@@ -81,6 +82,9 @@ class FlutterRoundedDatePickerDialog extends StatefulWidget {
   final OnTapDay? onTapDay;
 
   final Function? onMonthChange;
+
+  //customProperties
+  final String? title;
 
   @override
   _FlutterRoundedDatePickerDialogState createState() =>
@@ -250,6 +254,7 @@ class _FlutterRoundedDatePickerDialogState
       child: OrientationBuilder(
           builder: (BuildContext context, Orientation orientation) {
         final Widget header = FlutterRoundedDatePickerHeader(
+            title: widget.title!,
             selectedDate: _selectedDate,
             mode: _mode,
             onModeChanged: _handleModeChanged,

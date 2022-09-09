@@ -112,6 +112,7 @@ Future<DateTime?> showRoundedDatePicker(
     String? textPositiveButton,
     String? textActionButton,
     VoidCallback? onTapActionButton,
+    String? title,
     MaterialRoundedDatePickerStyle? styleDatePicker,
     MaterialRoundedYearPickerStyle? styleYearPicker,
     List<String>? customWeekDays,
@@ -160,6 +161,7 @@ Future<DateTime?> showRoundedDatePicker(
           //
         },
         child: FlutterRoundedDatePickerDialog(
+          title: title,
           height: height,
           initialDate: initialDate,
           firstDate: firstDate,
