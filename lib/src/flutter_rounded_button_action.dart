@@ -75,11 +75,13 @@ class FlutterRoundedButtonAction extends StatelessWidget {
     }
 
     return [
-      negativeButton,
-      SizedBox(
-        width: 11,
-      ),
-      positiveButton
+      Expanded(
+          child: Padding(
+              padding: EdgeInsets.only(left: 20), child: negativeButton)),
+      SizedBox(width: 11),
+      Expanded(
+          child: Padding(
+              padding: EdgeInsets.only(right: 20), child: positiveButton))
     ];
   }
 
@@ -93,8 +95,8 @@ class FlutterRoundedButtonAction extends StatelessWidget {
           borderRadius: orientation == Orientation.landscape
               ? BorderRadius.only(bottomRight: Radius.circular(borderRadius))
               : BorderRadius.vertical(bottom: Radius.circular(borderRadius))),
-      child: ButtonBar(
-        alignment: MainAxisAlignment.center,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: _buildActionsButton(),
       ),
     );
