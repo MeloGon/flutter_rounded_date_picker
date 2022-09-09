@@ -112,7 +112,6 @@ class FlutterRoundedDatePickerHeader extends StatelessWidget {
     }
 
     final Widget yearButton = Container(
-      color: Colors.red,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
